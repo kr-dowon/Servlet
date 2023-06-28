@@ -30,7 +30,7 @@
 	    list.add(map);
 	    
 	    String menu = request.getParameter("menu");
-	    int except = Integer.parseInt(request.getParameter("except"));
+	    String point = request.getParameter("point");
 	%>
 
 	<div class="container text-center">
@@ -46,12 +46,16 @@
 			<tbody>
 			<% for(Map<String, Object> store:list) { 
 			
-				double point = (Double)store.get("point");
 				// 메뉴명이 일치하는지
-				if(menu.equals(store.get("menu")) && point > except) {
+				if(menu.equals(store.get("menu"))) {
 					
 				// 별점이 4.0 이상인지
 				// Down Casting
+				double targetPoint = (Double)store.get("point");
+				// 체크가 안되었을때
+				// point가 체크가 된 상태일때, 4.0이상인것
+				if(point == null || targetPoint >= 4.0) {
+				
 			%>
 				<tr>
 					<td><%= store.get("menu") %></td>
@@ -59,6 +63,7 @@
 					<td><%= store.get("point") %></td>				
 				</tr>
 			<% 
+					}
 				}
 			}
 			%>
