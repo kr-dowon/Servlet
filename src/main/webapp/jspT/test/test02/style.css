@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+#wrap {
+	width: 1200px;
+	margin: auto;
+}
+
+header {
+	height: 80px;
+}
+
+header > .main-logo {
+	font-size: 35px;
+}
+
+.main-menu {
+	height: 40px;
+}
+
+.main-contents > .singer-info {
+	height: 200px;
+}
+
+#name {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#agency, #debute {
+	font-size : 18px;
+}
+
+.main-contents > .music-text {
+	font-size: 28px;
+}
+
+.main-contents > .music-text {
+	height: 50px;
+}
+
+.main-contents > .music-list {
+	height: 250px;
+}
+
+footer {
+	height: 50px;
+}

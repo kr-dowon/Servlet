@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+#wrap {
+	width: 1200px;
+	margin: auto;
+}
+
+header {
+	height: 60px;
+}
+
+header > .main-logo {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.main-menu {
+	height: 40px;
+}
+
+.main-content {
+	height: 650px;
+}
+
+footer {
+	height: 50px;
+}
